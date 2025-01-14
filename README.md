@@ -32,8 +32,8 @@ mvn install
 3. Perform three performance tests and calculate the average value.
 
 | **JDK Version** | **Score**    | **gc.alloc.rate** | **gc.count** |
-| --------------- | ------------ | ------------------------- | ------------ |
-| JDK 21.05       | 33.08 ops/ms | 635.45 MB/sec             | 61.33        |
-| JDK 1.8.171     | 47.65 ops/ms | 1,651.85 MB/sec           | 294          |
+| --------------- | ------------ | ----------------- | ------------ |
+| JDK 21.05       | 33.08 ops/ms | 635.45 MB/sec     | 61.33        |
+| JDK 1.8.171     | 47.65 ops/ms | 1,651.85 MB/sec   | 294          |
 
 Please refer to the detailed configuration parameters and execution results：[jmh-result](jmh-result)
