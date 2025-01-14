@@ -1,0 +1,268 @@
+PS D:\code\person\github\log4j2-perf-diff-jdk>  & 'C:\Program Files\Java\jdk1.8.0_171\bin\java.exe' -jar target/benchmarks.jar "FileAppenderSyncBenchmark.*" -jvmArgs "-Xmx2g -Xms2g" -f 2 -t 16 -w 10 -wi 2 -r 30 -i 2 -to 300 -prof gc -rf json
+# JMH version: 1.37
+# VM version: JDK 1.8.0_171, Java HotSpot(TM) 64-Bit Server VM, 25.171-b11
+# VM invoker: C:\Program Files\Java\jdk1.8.0_171\jre\bin\java.exe
+# VM options: -Xmx2g -Xms2g
+# Blackhole mode: full + dont-inline hint (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 10 s each
+# Measurement: 2 iterations, 30 s each
+# Timeout: 300 s per iteration
+# Threads: 16 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger
+
+# Run progress: 0.00% complete, ETA 00:02:40
+# Fork: 1 of 2
+# Warmup Iteration   1: 66.596 ops/ms
+# Warmup Iteration   2: 53.018 ops/ms
+Iteration   1: 39.402 ops/ms
+                 gc.alloc.rate:      1365.062 MB/sec
+                 gc.alloc.rate.norm: 36329.899 B/op
+                 gc.count:           60.000 counts
+                 gc.time:            51.000 ms
+
+Iteration   2: 44.666 ops/ms
+                 gc.alloc.rate:      1546.595 MB/sec
+                 gc.alloc.rate.norm: 36311.959 B/op
+                 gc.count:           69.000 counts
+                 gc.time:            58.000 ms
+
+
+# Run progress: 50.00% complete, ETA 00:01:20
+# Fork: 2 of 2
+# Warmup Iteration   1: 44.170 ops/ms
+# Warmup Iteration   2: 46.009 ops/ms
+Iteration   1: 45.151 ops/ms
+                 gc.alloc.rate:      1567.369 MB/sec
+                 gc.alloc.rate.norm: 36402.991 B/op
+                 gc.count:           70.000 counts
+                 gc.time:            60.000 ms
+
+Iteration   2: 50.431 ops/ms
+                 gc.alloc.rate:      1750.560 MB/sec
+                 gc.alloc.rate.norm: 36402.242 B/op
+                 gc.count:           78.000 counts
+                 gc.time:            66.000 ms
+
+
+
+Result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger":
+  44.912 ±(99.9%) 29.123 ops/ms [Average]
+  (min, avg, max) = (39.402, 44.912, 50.431), stdev = 4.507
+  CI (99.9%): [15.790, 74.035] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate":
+  1557.397 ±(99.9%) 1018.461 MB/sec [Average]
+  (min, avg, max) = (1365.062, 1557.397, 1750.560), stdev = 157.608
+  CI (99.9%): [538.935, 2575.858] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate.norm":
+  36361.773 ±(99.9%) 308.421 B/op [Average]
+  (min, avg, max) = (36311.959, 36361.773, 36402.991), stdev = 47.728
+  CI (99.9%): [36053.352, 36670.194] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.count":
+  277.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (60.000, 69.250, 78.000), stdev = 7.365
+  CI (99.9%): [277.000, 277.000] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.time":
+  235.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (51.000, 58.750, 66.000), stdev = 6.185
+  CI (99.9%): [235.000, 235.000] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:02:42
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                     Mode  Cnt      Score      Error   Units
+FileAppenderSyncBenchmark.syncFileLogger                     thrpt    4     44.912 ±   29.123  ops/ms
+FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate       thrpt    4   1557.397 ± 1018.461  MB/sec
+FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate.norm  thrpt    4  36361.773 ±  308.421    B/op
+FileAppenderSyncBenchmark.syncFileLogger:gc.count            thrpt    4    277.000             counts
+FileAppenderSyncBenchmark.syncFileLogger:gc.time             thrpt    4    235.000                 ms
+
+Benchmark result is saved to jmh-result.json
+PS D:\code\person\github\log4j2-perf-diff-jdk>  & 'C:\Program Files\Java\jdk1.8.0_171\bin\java.exe' -jar target/benchmarks.jar "FileAppenderSyncBenchmark.*" -jvmArgs "-Xmx2g -Xms2g" -f 2 -t 16 -w 10 -wi 2 -r 30 -i 2 -to 300 -prof gc -rf json
+# JMH version: 1.37
+# VM version: JDK 1.8.0_171, Java HotSpot(TM) 64-Bit Server VM, 25.171-b11
+# VM invoker: C:\Program Files\Java\jdk1.8.0_171\jre\bin\java.exe
+# VM options: -Xmx2g -Xms2g
+# Blackhole mode: full + dont-inline hint (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 10 s each
+# Measurement: 2 iterations, 30 s each
+# Timeout: 300 s per iteration
+# Threads: 16 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger
+
+# Run progress: 0.00% complete, ETA 00:02:40
+# Fork: 1 of 2
+# Warmup Iteration   1: 56.574 ops/ms
+# Warmup Iteration   2: 56.553 ops/ms
+Iteration   1: 55.899 ops/ms
+                 gc.alloc.rate:      1940.194 MB/sec
+                 gc.alloc.rate.norm: 36399.964 B/op
+                 gc.count:           87.000 counts
+                 gc.time:            69.000 ms
+
+Iteration   2: 39.651 ops/ms
+                 gc.alloc.rate:      1372.559 MB/sec
+                 gc.alloc.rate.norm: 36315.906 B/op
+                 gc.count:           61.000 counts
+                 gc.time:            53.000 ms
+
+
+# Run progress: 50.00% complete, ETA 00:01:20
+# Fork: 2 of 2
+# Warmup Iteration   1: 43.529 ops/ms
+# Warmup Iteration   2: 37.127 ops/ms
+Iteration   1: 34.990 ops/ms
+                 gc.alloc.rate:      1208.145 MB/sec
+                 gc.alloc.rate.norm: 36207.921 B/op
+                 gc.count:           54.000 counts
+                 gc.time:            53.000 ms
+
+Iteration   2: 36.489 ops/ms
+                 gc.alloc.rate:      1268.896 MB/sec
+                 gc.alloc.rate.norm: 36480.536 B/op
+                 gc.count:           57.000 counts
+                 gc.time:            53.000 ms
+
+
+
+Result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger":
+  41.757 ±(99.9%) 62.204 ops/ms [Average]
+  (min, avg, max) = (34.990, 41.757, 55.899), stdev = 9.626
+  CI (99.9%): [≈ 0, 103.961] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate":
+  1447.448 ±(99.9%) 2167.592 MB/sec [Average]
+  (min, avg, max) = (1208.145, 1447.448, 1940.194), stdev = 335.437
+  CI (99.9%): [≈ 0, 3615.040] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate.norm":
+  36351.082 ±(99.9%) 754.332 B/op [Average]
+  (min, avg, max) = (36207.921, 36351.082, 36480.536), stdev = 116.734
+  CI (99.9%): [35596.750, 37105.414] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.count":
+  259.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (54.000, 64.750, 87.000), stdev = 15.108
+  CI (99.9%): [259.000, 259.000] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.time":
+  228.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (53.000, 57.000, 69.000), stdev = 8.000
+  CI (99.9%): [228.000, 228.000] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:02:42
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                     Mode  Cnt      Score      Error   Units
+FileAppenderSyncBenchmark.syncFileLogger                     thrpt    4     41.757 ±   62.204  ops/ms
+FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate       thrpt    4   1447.448 ± 2167.592  MB/sec
+FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate.norm  thrpt    4  36351.082 ±  754.332    B/op
+FileAppenderSyncBenchmark.syncFileLogger:gc.count            thrpt    4    259.000             counts
+FileAppenderSyncBenchmark.syncFileLogger:gc.time             thrpt    4    228.000                 ms
+
+Benchmark result is saved to jmh-result.json
+PS D:\code\person\github\log4j2-perf-diff-jdk>  & 'C:\Program Files\Java\jdk1.8.0_171\bin\java.exe' -jar target/benchmarks.jar "FileAppenderSyncBenchmark.*" -jvmArgs "-Xmx2g -Xms2g" -f 2 -t 16 -w 10 -wi 2 -r 30 -i 2 -to 300 -prof gc -rf json
+# JMH version: 1.37
+# VM version: JDK 1.8.0_171, Java HotSpot(TM) 64-Bit Server VM, 25.171-b11
+# VM invoker: C:\Program Files\Java\jdk1.8.0_171\jre\bin\java.exe
+# VM options: -Xmx2g -Xms2g
+# Blackhole mode: full + dont-inline hint (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 10 s each
+# Measurement: 2 iterations, 30 s each
+# Timeout: 300 s per iteration
+# Threads: 16 threads, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger
+
+# Run progress: 0.00% complete, ETA 00:02:40
+# Fork: 1 of 2
+# Warmup Iteration   1: 56.066 ops/ms
+# Warmup Iteration   2: 39.342 ops/ms
+Iteration   1: 54.318 ops/ms
+                 gc.alloc.rate:      1884.665 MB/sec
+                 gc.alloc.rate.norm: 36385.334 B/op
+                 gc.count:           84.000 counts
+                 gc.time:            66.000 ms
+
+Iteration   2: 51.846 ops/ms
+                 gc.alloc.rate:      1799.624 MB/sec
+                 gc.alloc.rate.norm: 36400.347 B/op
+                 gc.count:           80.000 counts
+                 gc.time:            67.000 ms
+
+
+# Run progress: 50.00% complete, ETA 00:01:21
+# Fork: 2 of 2
+# Warmup Iteration   1: 49.376 ops/ms
+# Warmup Iteration   2: 51.773 ops/ms
+Iteration   1: 47.282 ops/ms
+                 gc.alloc.rate:      1637.114 MB/sec
+                 gc.alloc.rate.norm: 36307.693 B/op
+                 gc.count:           73.000 counts
+                 gc.time:            60.000 ms
+
+Iteration   2: 50.558 ops/ms
+                 gc.alloc.rate:      1754.462 MB/sec
+                 gc.alloc.rate.norm: 36390.785 B/op
+                 gc.count:           78.000 counts
+                 gc.time:            63.000 ms
+
+
+
+Result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger":
+  51.001 ±(99.9%) 18.930 ops/ms [Average]
+  (min, avg, max) = (47.282, 51.001, 54.318), stdev = 2.929
+  CI (99.9%): [32.072, 69.931] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate":
+  1768.966 ±(99.9%) 666.574 MB/sec [Average]
+  (min, avg, max) = (1637.114, 1768.966, 1884.665), stdev = 103.153
+  CI (99.9%): [1102.392, 2435.540] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate.norm":
+  36371.040 ±(99.9%) 275.828 B/op [Average]
+  (min, avg, max) = (36307.693, 36371.040, 36400.347), stdev = 42.685
+  CI (99.9%): [36095.212, 36646.868] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.count":
+  315.000 ±(99.9%) 0.001 counts [Sum]
+  (min, avg, max) = (73.000, 78.750, 84.000), stdev = 4.573
+  CI (99.9%): [315.000, 315.000] (assumes normal distribution)
+
+Secondary result "org.zengzuo613.log4j2.jdk.FileAppenderSyncBenchmark.syncFileLogger:gc.time":
+  256.000 ±(99.9%) 0.001 ms [Sum]
+  (min, avg, max) = (60.000, 64.000, 67.000), stdev = 3.162
+  CI (99.9%): [256.000, 256.000] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:02:42
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                                                     Mode  Cnt      Score     Error   Units
+FileAppenderSyncBenchmark.syncFileLogger                     thrpt    4     51.001 ±  18.930  ops/ms
+FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate       thrpt    4   1768.966 ± 666.574  MB/sec
+FileAppenderSyncBenchmark.syncFileLogger:gc.alloc.rate.norm  thrpt    4  36371.040 ± 275.828    B/op
+FileAppenderSyncBenchmark.syncFileLogger:gc.count            thrpt    4    315.000            counts
+FileAppenderSyncBenchmark.syncFileLogger:gc.time             thrpt    4    256.000                ms
