@@ -11,7 +11,7 @@ Use the main branch
 ```bash
 mvn clean
 mvn install
-{JAVA_HOME}/jdk-21/bin/java -jar target/benchmarks.jar "FileAppenderSyncBenchmark.*" -jvmArgs "-Xmx2g -Xms2g" -f 2 -t 16 -w 10 -wi 2 -r 30 -i 2 -to 300 -prof gc -rf json
+{JAVA21_HOME}/bin/java -jar target/benchmarks.jar "FileAppenderSyncBenchmark.*" -jvmArgs "-Xmx2g -Xms2g" -f 2 -t 16 -w 10 -wi 2 -r 30 -i 2 -to 300 -prof gc -rf json
 ```
 
 
@@ -22,7 +22,7 @@ Switch to the jdk1.8 branch
 ```bash
 mvn clean
 mvn install
-{JAVA_HOME}/jdk-8/bin/java -jar target/benchmarks.jar "FileAppenderSyncBenchmark.*" -jvmArgs "-Xmx2g -Xms2g" -f 2 -t 16 -w 10 -wi 2 -r 30 -i 2 -to 300 -prof gc -rf json
+{JAVA8_HOME}/bin/java -jar target/benchmarks.jar "FileAppenderSyncBenchmark.*" -jvmArgs "-Xmx2g -Xms2g" -f 2 -t 16 -w 10 -wi 2 -r 30 -i 2 -to 300 -prof gc -rf json
 ```
 
 ## 2. result
