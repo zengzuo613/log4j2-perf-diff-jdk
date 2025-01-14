@@ -17,7 +17,7 @@ mvn install
 
 ### 1.2 Evaluation using JDK 8
 
-Switch to the jdk8 branch
+Switch to the jdk1.8 branch
 
 ```bash
 mvn clean
