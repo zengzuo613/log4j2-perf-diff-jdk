@@ -1,6 +1,6 @@
 # Introduction
 
-This repository uses JMH to evaluate the performance of Log4j2 synchronous logging across different JDK versions.
+This repository uses JMH to evaluate the performance of Log4j2 synchronous logging (using FileAppender) across different JDK versions.
 
 ## 1. Usage
 
