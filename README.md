@@ -30,7 +30,7 @@ mvn install
 1. Laptop configuration: I5-1350P CPU, 32GB DDR5 5200 RAM, and Samsung MZVL4512HBLU-00BLL 512GB SSD.
 2. Log4j2 version is 2.24.3.
 3. Perform three performance tests and calculate the average value.
-4. Using Logger + FileAppender (default configuration)
+4. Using Logger + FileAppender (default configuration).
 
 | **JDK Version** | **Score**    | **gc.alloc.rate** | **gc.count** |
 | --------------- | ------------ | ----------------- | ------------ |
