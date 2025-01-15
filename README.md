@@ -1,6 +1,6 @@
 # Introduction
 
-This repository uses JMH to evaluate the performance of Log4j2 synchronous logging (using FileAppender) across different JDK versions.
+This repository uses JMH to evaluate the performance of Log4j2 synchronous logging across different JDK versions.
 
 ## 1. Usage
 
@@ -30,6 +30,7 @@ mvn install
 1. Laptop configuration: I5-1350P CPU, 32GB DDR5 5200 RAM, and Samsung MZVL4512HBLU-00BLL 512GB SSD.
 2. Log4j2 version is 2.24.3.
 3. Perform three performance tests and calculate the average value.
+4. Using Logger + FileAppender (default configuration)
 
 | **JDK Version** | **Score**    | **gc.alloc.rate** | **gc.count** |
 | --------------- | ------------ | ----------------- | ------------ |
